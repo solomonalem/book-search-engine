@@ -1,11 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
 
-import { getMe, deleteBook } from '../utils/API';
+
 import Auth from '../utils/auth';
+import { useQuery,useMutation } from '@apollo/react-hooks';
+import { QUERY_USER } from '../utils/queries';
+import { DELETE_BOOK } from '../utils/mutations';
 import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
+  
+  const { username: userParam } = useParams();
+
+  const { loading, data } = useQuery(QUERY_USER,{
+    variables: { username: userParam }
+  });
+
+  const [deleteBook] = useMutation(DELETE_BOOK);
+
   const [userData, setUserData] = useState({});
 
   // use this to determine if `useEffect()` hook needs to run again
@@ -13,24 +26,8 @@ const SavedBooks = () => {
 
   useEffect(() => {
     const getUserData = async () => {
-      try {
-        const token = Auth.loggedIn() ? Auth.getToken() : null;
-
-        if (!token) {
-          return false;
-        }
-
-        const response = await getMe(token);
-
-        if (!response.ok) {
-          throw new Error('something went wrong!');
-        }
-
-        const user = await response.json();
-        setUserData(user);
-      } catch (err) {
-        console.error(err);
-      }
+        setUserData(data);
+      
     };
 
     getUserData();
@@ -61,7 +58,7 @@ const SavedBooks = () => {
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
 
