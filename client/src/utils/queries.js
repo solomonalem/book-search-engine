@@ -1,20 +1,19 @@
 import gql from 'graphql-tag';
 
-export const QUERY_USER = gql`
-  query user($username: String!) {
-    user(username: $username) {
+export const GET_ME = gql`
+  {
+    me {
       _id
       username
       email
       bookCount
-      savedBooks
-          {
-          _id
-          authors
-          description
-          image
-          link
-          title
+      savedBooks {
+        bookId
+        authors
+        image
+        link
+        title
+        description
       }
     }
   }
