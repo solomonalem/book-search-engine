@@ -70,18 +70,18 @@ npm run start
 
 ### LARGE SCREEN SIZE
 
-<img src="./public/assets/image/screenshot-1.png" alt="large-screen app" width="700px"/>
-<img src="./public/assets/image/screenshot-2.png" alt="large-screen app" width="700px"/>
-<img src="./public/assets/image/screenshot-3.png" alt="large-screen app" width="700px"/>
-<img src="./public/assets/image/screenshot-4.png" alt="large-screen app" width="700px"/>
-<img src="./public/assets/image/screenshot-5.png" alt="large-screen app" width="700px"/>
-<img src="./public/assets/image/screenshot-6.png" alt="large-screen app" width="700px"/>
+<img src="./client/src/assets/screenshot-1.png" alt="large-screen app" width="700px"/>
+<img src="./client/src/assets/screenshot-4.png" alt="large-screen app" width="700px"/>
+<img src="./client/src/assets/screenshot-3.png" alt="large-screen app" width="700px"/>
 
 ### SMALL SCREEN SIZE
 
-<img src="./public/assets/image/screenshot-7.png" alt="large-screen app" width="400px"/>
-<img src="./public/assets/image/screenshot-8.png" alt="large-screen app" width="400px"/>
-<img src="./public/assets/image/screenshot-9.png" alt="large-screen app" width="400px"/>
-<img src="./public/assets/image/screenshot-10.png" alt="large-screen app" width="400px"/>
+<img src="./client/src/assets/screenshot-3.png" alt="large-screen app" width="400px"/>
+
+
+
+
+
+
 
 ### ©️2021 Book-search-engine
