@@ -92,9 +92,9 @@ const SearchBooks = () => {
 
   return (
     <>
-      <Jumbotron fluid className="text-light bg-dark">
+      <Jumbotron fluid className="text-light" id="jumbotron">
         <Container>
-          <h1>Search for Books!</h1>
+          <h2>Search for Books!</h2>
           <Form onSubmit={handleFormSubmit}>
             <Form.Row>
               <Col xs={12} md={8}>

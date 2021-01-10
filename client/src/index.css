@@ -1,5 +1,6 @@
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "lato", sans-serif;
+  font-size: 16px;
 }
 
 h1,
@@ -8,10 +9,34 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .small {
   font-weight: 300;
   font-style: italic;
+}
+#jumbotron {
+  background-image: url("./assets/bg-book-1.jpg");
+  background-size: cover;
+}
+.navbar {
+  background-color: rgb(8, 8, 8);
+}
+.navbar Nav {
+  background-color: rgb(197, 197, 197);
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(39, 38, 38);
+  margin-right: 0.5rem;
+  border-radius: 1.5rem;
+  padding: 0.3rem 0.9rem !important;
+}
+Button {
+  border-radius: 0.4rem !important;
+}
+
+.form-control {
+  border-radius: 0.4rem !important;
 }
